@@ -1,0 +1,31 @@
+.featured {
+    margin-top: 20px;
+
+    .container {
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 40px;
+        background-color: #c4c4c433;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            padding: 0;
+
+            img {
+                @media screen and (max-width: 768px) {
+                    margin-bottom: 27px;
+
+                    &:first-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

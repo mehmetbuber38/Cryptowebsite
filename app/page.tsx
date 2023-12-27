@@ -1,95 +1,130 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import React from "react";
+import { Footer, Header } from "./layouts";
+import Image from "next/image";
+import {
+  Hero,
+  Subtitle,
+  Featured,
+  Analytics,
+  Application,
+  Access,
+  Testimonial,
+  Ready,
+} from "./components";
+import "./main.scss";
 
-export default function Home() {
+const footerHomeData = [
+  {
+    home: ["About", "Buy NFTs", "Sell NFTs"],
+  },
+];
+
+const footerMarketData = [
+  {
+    market: ["Browse NFTs", "Buy NFTs", "Sell NFTs"],
+  },
+];
+
+const footerContactData = [
+  {
+    contact: ["Email", "LinkedIn", "Twitter", "Instagram"],
+  },
+];
+
+function page() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+    <>
+      <Header />
+      <main className="">
+        <section className="section-hero">
+          <Hero
+            title="discover and collect rare NFTs"
+            description="The most secure marketplace for buying and selling unique crypto assets."
+            buttonText="BUY NFTS"
+          />
+        </section>
+
+        <section className="section-featured">
+          <Subtitle title="Featured on" />
+          <Featured />
+        </section>
+
+        <section className="section-analytics">
+          <Subtitle title="Analytics" />
+          <Analytics
+            url="/analytics.png"
+            title="built-in analytics to track your nfts"
+            description="Use our built-in analytics dashboard to pull valuable insights and monitor the value of your Krypto portfolio over time."
+            buttonText="view our pricing"
+          />
+        </section>
+
+        <section className="section-application">
+          <Subtitle title="Get Our App" />
+          <Application
+            url1="/app-1.png"
+            title="browse nfts from your smartphone"
+            description="browse nfts from your smartphone"
+            buttonText="Download on ıos"
+            url2="/app-2.png"
+          />
+        </section>
+
+        <section className="section-access">
+          <Subtitle title="7/24 Access" />
+          <Access
+            title="sell your NFTs from anywhere at any time"
+            description="With our easy-to-use platform, you can buy or sell assets from anywhere in the world, at any time."
+            buttonText="Get Started"
+          />
+        </section>
+
+        <section className="section-testimonial">
+          <Subtitle title="Testimonial" />
+          {/* <h1>Read what others have to say</h1> */}
+          <section className="section-testimonial__body">
+            <Testimonial
+              url="/olivia-cole.png"
+              title="Olivia Cole"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. "
             />
-          </a>
-        </div>
-      </div>
+            <Testimonial
+              url="/ewan-white.png"
+              title="Evan White"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. "
+            />
+            <Testimonial
+              url="/jessica-page.png"
+              title="Jessica Page"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. "
+            />
+          </section>
+        </section>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+        <section className="section-ready">
+          <Ready
+            title1="are you ready?"
+            title2="be a part of the next big thing"
+            buttonText="Get Started"
+          />
+        </section>
+      </main>
+
+      <footer>
+        <Footer
+          homeTitle="Home"
+          home={footerHomeData[0].home} // footerHomeData'dan gelen veriyi home prop'u olarak geçir
+          marketTitle="Market"
+          market={footerMarketData[0].market}
+          contactTitle="Contact"
+          contact={footerContactData[0].contact}
+          newsletterTitle="join our newsletter"
+          buttonText="Email address"
+          submitButtonText="Submit"
         />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      </footer>
+    </>
+  );
 }
+
+export default page;

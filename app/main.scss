@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;700&family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap");
+
+body {
+    background: #565da9;
+}
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.section {
+    &-featured {
+        margin: 27px 0 62px 0;
+
+        @media screen and (max-width: 768px) {
+            margin: 27px 20px 62px 20px;
+            
+        }
+    }
+
+    &-analytics {
+    }
+
+    &-application {
+        margin: 25px 0 0 0;
+    }
+
+    &-access {
+        margin-top: -70px;
+        margin-bottom: 55px;
+    }
+
+    &-testimonial {
+        margin-bottom: 77px;
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-family: Readex Pro;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 27px;
+            margin-bottom: 85px;
+        }
+
+        &__body {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &-ready {
+        margin-bottom: 43px;
+    }
+}

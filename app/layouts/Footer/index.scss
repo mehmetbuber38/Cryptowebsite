@@ -1,0 +1,107 @@
+.footer {
+    &__body {
+        border-top: 5px solid rgba(34, 17, 85, 0.6);
+        padding-top: 25px;
+        display: flex;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__menu {
+        display: flex;
+
+        @media screen and (max-width: 768px) {
+            margin: 0 20px;
+        }
+
+        &-items {
+            &-item {
+                margin-bottom: 25px;
+                a {
+                    color: #fff;
+                    font-family: Roboto;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 31px; /* 140.909% */
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .list {
+            margin-right: 90px;
+
+            @media screen and (max-width: 768px) {
+                margin-right: 55px;
+            }
+        }
+    }
+
+    &__newsletter {
+        color: #fff;
+        font-family: Roboto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: capitalize;
+        margin-left: 75px;
+
+        @media screen and (max-width: 768px) {
+            text-align: center;
+            margin-left: 0;
+        }
+
+        &-title {
+            margin-bottom: 56px;
+
+            @media screen and (max-width: 768px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &-email {
+            padding: 16px 107px 13px 19px;
+            color: #000;
+            font-family: Roboto;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 31px;
+            border-radius: 25px;
+            border: 3px solid #000;
+            background: #dec179;
+            margin-right: 18px;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                padding: 16px 107px 13px 107px;
+                margin: 0 0 20px 0;
+            }
+        }
+
+        &-submit {
+            padding: 16px 34px 13px;
+            color: #000;
+            font-family: Roboto;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 31px;
+            border-radius: 25px;
+            border: 3px solid #000;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+        }
+    }
+}
+.footer__menu-title {
+    color: #fff;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 22px;
+}

@@ -1,0 +1,75 @@
+.header {
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width: 768px) {
+            padding: 0 20px;
+        }
+
+        &-logo {
+            @media screen and (max-width: 768px) {
+                margin-top: 10px;
+            }
+        }
+
+        &-menu {
+            display: flex;
+            align-items: center;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+
+            li {
+                margin: 0 50px;
+                list-style: none;
+
+                a {
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    color: #fff;
+                    font-weight: 400;
+                    font-family: "Roboto";
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .hamburger-menu {
+        display: none;
+        cursor: pointer;
+
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px auto;
+        }
+    }
+
+    &.menu-open {
+        .header__body-menu {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 35px;
+            left: -30px;
+            width: 100%;
+            height: calc(100% - 50px);
+            background-color: #458ff6;
+            z-index: 11;
+            overflow: hidden;
+            align-items: center;
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
