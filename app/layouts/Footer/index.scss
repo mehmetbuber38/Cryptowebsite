@@ -63,21 +63,20 @@
             }
         }
 
-        &-email {
-            padding: 16px 107px 13px 19px;
+        &-input {
+            padding: 16px 0 13px 19px;
             color: #000;
             font-family: Roboto;
             font-size: 20px;
             font-weight: 500;
             line-height: 31px;
             border-radius: 25px;
-            border: 3px solid #000;
             background: #dec179;
             margin-right: 18px;
+            border: none;
 
             @media screen and (max-width: 768px) {
-                width: 100%;
-                padding: 16px 107px 13px 107px;
+                padding: 16px 60px 13px 107px;
                 margin: 0 0 20px 0;
             }
         }

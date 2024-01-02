@@ -2,6 +2,7 @@
 import { useState } from "react";
 import "./index.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ const Header = () => {
       <div className="container">
         <div className="header__body">
           <div className="header__body-logo">
-            <Image src={"/krypto.png"} alt="Krypto" width={93} height={22} />
+            <Image src="/krypto.png" alt="Krypto" width={93} height={22} />
           </div>
 
           <div
@@ -29,16 +30,16 @@ const Header = () => {
 
           <ul className={`header__body-menu ${isMenuOpen ? "open" : ""}`}>
             <li>
-              <a href="#">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <a href="#">Pricing</a>
+              <Link href="/pricing">Pricing</Link>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <Link href="/contact">Contact</Link>
             </li>
             <li>
-              <a href="#">Buy NFTs</a>
+              <Link href="/buy-nfts">Buy NFTs</Link>
             </li>
           </ul>
         </div>

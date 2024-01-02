@@ -2,10 +2,11 @@ export type FooterProps = {
     homeTitle?: string
     marketTitle?: string
     contactTitle?: string
-    buttonText?: string
+    inputText?: string
     submitButtonText?: string
     newsletterTitle?: string
-    home?: string[]
-    market?: string[]
-    contact?: string[]
+    home?: string[] | undefined
+    market?: string[] | undefined
+    contact?: string[] | undefined
+
 }

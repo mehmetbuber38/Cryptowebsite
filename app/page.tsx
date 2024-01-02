@@ -13,19 +13,15 @@ import {
 } from "./components";
 import "./main.scss";
 
-const footerHomeData = [
+const footerData = [
   {
     home: ["About", "Buy NFTs", "Sell NFTs"],
   },
-];
 
-const footerMarketData = [
   {
     market: ["Browse NFTs", "Buy NFTs", "Sell NFTs"],
   },
-];
 
-const footerContactData = [
   {
     contact: ["Email", "LinkedIn", "Twitter", "Instagram"],
   },
@@ -113,13 +109,12 @@ function page() {
       <footer>
         <Footer
           homeTitle="Home"
-          home={footerHomeData[0].home} // footerHomeData'dan gelen veriyi home prop'u olarak geçir
+          home={footerData[0].home} // footerHomeData'dan gelen veriyi home prop'u olarak geçir
           marketTitle="Market"
-          market={footerMarketData[0].market}
+          market={footerData[1].market}
           contactTitle="Contact"
-          contact={footerContactData[0].contact}
+          contact={footerData[2].contact}
           newsletterTitle="join our newsletter"
-          buttonText="Email address"
           submitButtonText="Submit"
         />
       </footer>
